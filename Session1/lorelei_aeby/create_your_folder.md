@@ -54,7 +54,3 @@ In your terminal, try:
 `git config pull.rebase false`
 <br>
 `git pull origin main`
-
-
-git config --global user.name "Lorelei Aeby"
-git config --global user.email "lorelei.aeby@gmail.com"
