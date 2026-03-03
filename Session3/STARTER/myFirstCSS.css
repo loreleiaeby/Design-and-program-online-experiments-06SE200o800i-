@@ -1,0 +1,9 @@
+/* this is my external style .css*/
+* {
+color: purple;
+text-align: left;
+}
+<!--link to .html-->
+<head>
+<link rel="stylesheet" href="myFirstCSS.css">
+</head>
