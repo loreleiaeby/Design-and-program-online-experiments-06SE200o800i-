@@ -4,4 +4,4 @@
 
 // Method 2 <- this is also JS comment
 
-console.log("Hello, World 2!")
+console.warn("Hello, World 2!")
