@@ -37,6 +37,8 @@ trials.forEach(
     }
   }
 )
+//t is Element
+// condition to add 1 (++) for every trial that is defined as correct)
 // your code end
 console.log("Correct answers:", correctCount);
 const acc =  correctCount/trials.length;
