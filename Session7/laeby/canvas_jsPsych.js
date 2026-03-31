@@ -8,9 +8,10 @@
 // plus 1: draw an easter egg (with some decoration) next to the bunny 
 
 //step 2:  initiate jsPsych
-
+  const jsPsych = initJsPsych()
+    
 // step 3: building timeline 
-
+const timeline = [];
 // instruction 
 const instruction = {
     type: jsPsychHtmlKeyboardResponse,
@@ -106,5 +107,5 @@ timeline.push(end)
 
 // step 4: run the timline
 
-
+ jsPsych.run(timeline);
 

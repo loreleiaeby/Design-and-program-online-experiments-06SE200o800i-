@@ -22,7 +22,7 @@ const fixation = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: "<h1>+</h1>",
     choices: "NO_KEYS",
-    trial_duration: 3000
+    trial_duration: 1000
 }
 
 timeline.push(fixation);
@@ -35,14 +35,14 @@ const canvastrial = {
     stimulus: function drawFn(canvas){
     const ctx = canvas.getContext("2d");
     console.dir(ctx);
-    ctx.fillStyle="blue"
+    ctx.fillStyle="skyblue"
     ctx.fillRect(50, 50, 200, 50);
-    ctx.strokeStyle = "yellow";
+    ctx.strokeStyle = "peach";
     ctx.strokeRect(50, 50, 200, 50);
-    ctx.clearRect(60, 50, 20, 20);
+    ctx.clearRect(60, 60, 20, 20);
 },
     choices: "ALL_KEYS",
-    trial_duration: 5000
+    trial_duration: 4000
 }
 
 timeline.push(canvastrial);
@@ -53,14 +53,6 @@ timeline.push(canvastrial);
 
   </script>
 
-        // step 2: initiate jsPsych instance and assign to a variable 
-
-
-        //Step 3:  build your timeline
- 
-
-
-        //Step 4: run your jsPsych
 
 
 </body>
