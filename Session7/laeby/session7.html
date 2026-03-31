@@ -28,15 +28,14 @@ const fixation = {
 timeline.push(fixation);
 
 const canvastrial = {
-    type: jsPsychCanvasKeyboardResponse
-    canvas_size: [window.innerHeight, window.innerWidth]
-    stimulus: //leaver empty for now
-    choices: ['g']
+    type: jsPsychCanvasKeyboardResponse,
+    canvas_size: [window.innerHeight, window.innerWidth],
+    stimulus: //leaver empty for now,
+    choices: ['g'],
     trial_duration: 5000
 }
 
-
-
+timeline.push(canvastrial);
 
     jsPsych.run(timeline);
 
