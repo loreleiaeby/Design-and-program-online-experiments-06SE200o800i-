@@ -24,14 +24,15 @@ timeline.push(instruction);
 
 // 7.2.2 make the trial_duration randomly selected from 1s, 2s or 3s
 // fixation 
+const durations = [1000, 2000, 3000]
+
 const fixation = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: "+",
     choices: "NO_KEYS",
-    trial_duration: function(){
-        const durations = [1000, 2000, 3000];
-        return jsPsych.randomized.sampleWithoutReplacement(durations,1)[0];
-}
+    trial_duration: durations[Math.floor(Math.random()*durations.length)]
+};
+
 timeline.push(fixation);
 
 
