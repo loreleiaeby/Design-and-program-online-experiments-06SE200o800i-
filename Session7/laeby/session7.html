@@ -31,7 +31,10 @@ function drawFn(canvas){
     const ctx = canvas.getContext("2d");
     console.dir(ctx);
     ctx.fillstyle="skyblue"
-
+    ctx.fillRect(50, 50, 200, 50);
+    ctx.strokeStyle = "peach";
+    ctx.strokeRect(50, 50, 200, 50);
+    ctx.clearRect(60, 50, 20, 20);
 }
 
 const canvastrial = {
