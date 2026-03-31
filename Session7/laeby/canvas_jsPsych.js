@@ -8,7 +8,7 @@
 // plus 1: draw an easter egg (with some decoration) next to the bunny 
 
 //step 2:  initiate jsPsych
-  const jsPsych = initJsPsych()
+  const jsPsych = initJsPsych();
     
 // step 3: building timeline 
 const timeline = [];
