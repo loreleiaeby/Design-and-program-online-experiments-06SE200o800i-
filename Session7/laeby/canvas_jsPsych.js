@@ -28,7 +28,9 @@ const fixation = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: "+",
     choices: "NO_KEYS",
-    trial_duration: 1000
+    trial_duration: function(){
+        const durations = [1000, 2000, 3000];
+        return jsPsych.randomized.sampleWithoutReplacement(durations,1)[0];
 }
 timeline.push(fixation);
 
