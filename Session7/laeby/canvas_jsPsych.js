@@ -101,7 +101,7 @@ const drawBunnyfn = function (canvas){
 
 const end = {
     type: jsPsychHtmlKeyboardResponse,
-    stimulus: "<h2>👍<h2>",
+    stimulus: "<h2>👍</h2>",
     choices: "NO_KEYS",
     trial_duration: 1000
 }
