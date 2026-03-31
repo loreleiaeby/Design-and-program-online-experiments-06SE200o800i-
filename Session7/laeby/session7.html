@@ -35,12 +35,12 @@ const canvastrial = {
     stimulus: function drawFn(canvas){
     const ctx = canvas.getContext("2d");
     console.dir(ctx);
-    ctx.fillstyle="blue"
+    ctx.fillStyle="blue"
     ctx.fillRect(50, 50, 200, 50);
     ctx.strokeStyle = "yellow";
     ctx.strokeRect(50, 50, 200, 50);
     ctx.clearRect(60, 50, 20, 20);
-}
+},
     choices: "ALL_KEYS",
     trial_duration: 5000
 }
