@@ -98,7 +98,7 @@ const drawBunnyfn = function (canvas){
        context.fill();
 
 }
-
+timeline.push(drawBunnyfn);
 
 const end = {
     type: jsPsychHtmlKeyboardResponse,
