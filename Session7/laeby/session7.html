@@ -27,20 +27,20 @@ const fixation = {
 
 timeline.push(fixation);
 
-function drawFn(canvas){
-    const ctx = canvas.getContext("2d");
-    console.dir(ctx);
-    ctx.fillstyle="skyblue"
-    ctx.fillRect(50, 50, 200, 50);
-    ctx.strokeStyle = "peach";
-    ctx.strokeRect(50, 50, 200, 50);
-    ctx.clearRect(60, 50, 20, 20);
-}
+
 
 const canvastrial = {
     type: jsPsychCanvasKeyboardResponse,
     canvas_size: [window.innerHeight, window.innerWidth],
-    stimulus: drawFn;
+    stimulus: function drawFn(canvas){
+    const ctx = canvas.getContext("2d");
+    console.dir(ctx);
+    ctx.fillstyle="blue"
+    ctx.fillRect(50, 50, 200, 50);
+    ctx.strokeStyle = "yellow";
+    ctx.strokeRect(50, 50, 200, 50);
+    ctx.clearRect(60, 50, 20, 20);
+}
     choices: "ALL_KEYS",
     trial_duration: 5000
 }
