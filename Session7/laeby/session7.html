@@ -27,6 +27,13 @@ const fixation = {
 
 timeline.push(fixation);
 
+function drawFn(canvas){
+    const ctx = canvas.getContext("2d");
+    console.dir(ctx);
+
+
+}
+
 const canvastrial = {
     type: jsPsychCanvasKeyboardResponse,
     canvas_size: [window.innerHeight, window.innerWidth],
@@ -36,15 +43,6 @@ const canvastrial = {
 }
 
 timeline.push(canvastrial);
-
-
-function drawFn(canvas){
-    const ctx = canvas.getContext("2D");
-    console.dir(ctx);
-    
-
-
-}
 
 
 
