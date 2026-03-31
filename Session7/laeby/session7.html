@@ -15,7 +15,27 @@
 </head>
 <body>
         //Step 1: add script for experiment 
-  
+  <script>
+    const jsPsych = initJsPsych()
+    const timeline = [];
+const fixation = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: "<h1>+</h1>",
+    choices: "NO_KEYS",
+    trial_duration: 1000
+}
+
+timeline.push(fixation);
+
+
+
+
+    jsPsych.run(timeline);
+
+
+
+
+  </script>
 
         // step 2: initiate jsPsych instance and assign to a variable 
 
