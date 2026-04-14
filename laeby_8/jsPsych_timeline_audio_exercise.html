@@ -25,10 +25,14 @@
   <script>
 
     /* initialize jsPsych */
-    const jsPsych = initJsPsych();
+    const jsPsych = initJsPsych({
+      on_finish: () => {
+        jsPsych.data.get().localSave('csv','verbal_fluency_data.csv');
+      }
+    });
 
 jsPsych.data.addProperties({
-  participant_id:"P001"
+  participant_id: "P001",
   session: "pre-test"
 });
 
@@ -57,9 +61,9 @@ jsPsych.data.addProperties({
         can say any kind of word you want, except for proper nouns (like Bob or Boston), numbers <br><br>
         The recording will stop after one minute.  <br><br> Are you ready?.</p>
       `,
-      on_finish: (data)=>{
-        data.speed_label = data.rt<300?'fast':'slow';
-      }
+      on_finish: (data) => {
+        data.speed_label = data.rt < 300 ? 'fast':'slow';
+      },
       data:{phase:"instruction"},
       choices: ['Yes, I am ready!']
     }
@@ -73,7 +77,7 @@ const record = {
   <p style="font-size:48px;color:green;">GREEN</p>
   <p>Speak the color of the ink.</p>`
 ,
-  recording_duration: 6000,
+  recording_duration: 60000,
   allow_playback:true,
   data:{
     phase: "fluency",
@@ -89,14 +93,14 @@ const record = {
         const allData = jsPsych.data.get();
         console.log("allData", allData);
         const nSlow = allData.filter({speed_label:"slow"}).count();
-        return nslow > 0? "too slow": "Thank you";
+        return nSlow > 0? "too slow": "Thank you";
       },
       choices: ["Finish now"],
       data:{phase:'end'}
     };
     timeline.push(endMsg);
 
-    
+
     /* start the experiment */
     jsPsych.run(timeline);
     
