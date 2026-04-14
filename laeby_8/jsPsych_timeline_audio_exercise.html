@@ -83,6 +83,20 @@ const record = {
 
     timeline.push(record);
 
+    const endMsg = {
+      type:jsPsychHtmlButtonResponse,
+      stimulus: () => {
+        const allData = jsPsych.data.get();
+        console.log("allData", allData);
+        const nSlow = allData.filter({speed_label:"slow"}).count();
+        return nslow > 0? "too slow": "Thank you";
+      },
+      choices: ["Finish now"],
+      data:{phase:'end'}
+    };
+    timeline.push(endMsg);
+
+    
     /* start the experiment */
     jsPsych.run(timeline);
     
