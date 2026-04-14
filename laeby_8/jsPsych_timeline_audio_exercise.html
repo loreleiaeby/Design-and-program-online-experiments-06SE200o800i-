@@ -46,7 +46,7 @@
     const instruction = {
       type: jsPsychHtmlButtonResponse,
       stimulus: `
-        <h1>Verbal Fluency Test Instruction</h2>
+        <h1>Verbal Fluency Test Instruction</h1>
         <p>Tell me as many words as you
         can think of that begin with a certain letter of the alphabet that I will tell you in a moment. <br><br> You
         can say any kind of word you want, except for proper nouns (like Bob or Boston), numbers <br><br>
@@ -58,15 +58,15 @@
 
     /* exercise 8.1:  add recording for 1 min the timeline */
 
-const trial_audio = {
+const record = {
   type: jsPsychHtmlAudioResponse,
-  stimulus:
-  <p style = "font-size:48px;color:green;">GREEN</p>
-  <p>Speak the color of the ink.</p>,
-  recording_duration: 60000;
+  stimulus:`
+  <p style="font-size:48px;color:green;">GREEN</p>
+  <p>Speak the color of the ink.</p>
+  `,
+  recording_duration: 60000
 };
 
-    
     timeline.push(record);
 
     /* start the experiment */
