@@ -27,6 +27,11 @@
     /* initialize jsPsych */
     const jsPsych = initJsPsych();
 
+jsPsych.data.addProperties({
+  participant_id:"P001"
+  session: "pre-test"
+});
+
     /* create timeline */
     const timeline = [];
 
@@ -52,6 +57,7 @@
         can say any kind of word you want, except for proper nouns (like Bob or Boston), numbers <br><br>
         The recording will stop after one minute.  <br><br> Are you ready?.</p>
       `,
+      data:{phase:"instruction"},
       choices: ['Yes, I am ready!']
     }
     timeline.push(instruction);
@@ -65,7 +71,11 @@ const record = {
   <p>Speak the color of the ink.</p>
   `,
   recording_duration: 6000,
-  allow_playback:true
+  allow_playback:true,
+  data:{
+    phase: "fluency",
+    condition: "F"
+  }
 };
 
     timeline.push(record);
