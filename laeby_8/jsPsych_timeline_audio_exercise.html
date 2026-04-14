@@ -57,6 +57,9 @@ jsPsych.data.addProperties({
         can say any kind of word you want, except for proper nouns (like Bob or Boston), numbers <br><br>
         The recording will stop after one minute.  <br><br> Are you ready?.</p>
       `,
+      on_finish: (data)=>{
+        data.speed_label = data.rt<300?'fast':'slow';
+      }
       data:{phase:"instruction"},
       choices: ['Yes, I am ready!']
     }
@@ -75,7 +78,7 @@ const record = {
   data:{
     phase: "fluency",
     condition: "F"
-  },
+  }
 };
 
     timeline.push(record);
