@@ -387,9 +387,12 @@
 
         /*10.2.3 Use ⁠addEventListener() to add a keyboard shortcut: when the user presses the S key, switch between text mode and image mode */
 
-          document.getElementById("s").addEventListener("click", function () {
-            changeRule();
-        });
+          document.addEventListener("keydown", 
+          function shortcut () {
+            if (event.key === "s"){
+                changeRule();
+        }
+    });
 
     </script>
 </body>
