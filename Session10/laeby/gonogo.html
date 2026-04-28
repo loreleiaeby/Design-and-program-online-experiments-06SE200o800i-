@@ -187,6 +187,16 @@
             }
         }
 
+        function changeButtonColour () {
+            if (text_0_img_1 === 0) {
+                text_0_img_1 = 1;
+                document.getElementById("ruleBtn").style.background = "#FF0000";
+        } else {
+                text_0_img_1 = 0;
+                document.getElementById("ruleBtn").style.background = "#00FFFF";
+        }
+    }
+
 
         // This function creates one experimental trial.
         // 'type' tells us whether the current trial is a GO trial or a NO-GO trial.
