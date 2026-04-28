@@ -15,16 +15,23 @@
     <p>Press the R key</p>
 
     <script>
-docment.addEventListener("keydown",
+document.addEventListener("keydown",
     function myevenet(event){
-        if (event.key == "R"){
+        if (event.key == "r"){
             alert("alert 3");
-            else if (event.key === "e"){
+          }  else if (event.key === "e"){
                 alert("not R key");
             }
         }
-    }
 )
+
+document.addEventListener('click',
+(event)=> {
+    console.log(`Event type: ${event.type}`);
+    console.log(`Target element: ${event.target}`);
+    console.log(`Mouse position: (${event.clientX}, ${event.clientY})`);
+})
+
     </script>
 
 </body>
