@@ -14,29 +14,16 @@
     <title>Session 11</title>
 </head>
 <body>
-        //Step 1: add script for experiment 
-
-        // step 2: initiate jsPsych instance and assign to a variable 
-
-
-        //Step 3:  build your timeline
-
-        // Step 3.1: Define your stimulus object array
-        // Step 3.2: Write ONE trial template
-        // step 3.3: Link them together in a block 
-
-        
- 
-        //Step 4: run your jsPsych
-
+       
         <script>
 
 // define STIMULI array for later
+const jsPsych = initJsPsych();
 
 const flankerStimuli = [
   
-  {stimulus: ">>>>>", direction: "left", congruent: true},
-  {stimulus: "<<<<<", direction: "right", congruent: true},
+  {stimulus: ">>>>>", direction: "right", congruent: true},
+  {stimulus: "<<<<<", direction: "left", congruent: true},
   {stimulus: ">><>>", direction: "left", congruent: false},
   {stimulus: "<<><<", direction: "right", congruent: false},
   
